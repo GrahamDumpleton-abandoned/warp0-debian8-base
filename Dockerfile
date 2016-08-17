@@ -32,3 +32,7 @@ ENV NGHTTP2_VERSION=1.13.0 \
 RUN /tmp/build/install.sh
 
 ENV PATH=/usr/local/apache/bin:$PATH
+
+# Workaround for S2I requirement to have /bin/env.
+
+RUN ln -s /usr/bin/env /bin/env
