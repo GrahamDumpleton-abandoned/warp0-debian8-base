@@ -23,12 +23,12 @@ ENV LANG=en_US.UTF-8 \
 
 COPY install.sh /tmp/build/install.sh
 
-ENV NGHTTP2_VERSION=1.13.0 \
+ENV NGHTTP2_VERSION=1.19.0 \
     APR_VERSION=1.5.2 \
     APR_UTIL_VERSION=1.5.4 \
-    APACHE_VERSION=2.4.23 \
+    APACHE_VERSION=2.4.25 \
     NSS_WRAPPER_VERSION=1.1.3 \
-    TINI_VERSION=0.9.0
+    TINI_VERSION=0.14.0
 
 RUN /tmp/build/install.sh
 
