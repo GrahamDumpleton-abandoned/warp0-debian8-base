@@ -11,9 +11,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libtinfo-dev \
         locales \
         mime-support \
+        npm \
+        nodejs-legacy \
         pkg-config \
         rsync \
         vim \
+    && apt-get clean \
     && rm -r /var/lib/apt/lists/*
 
 RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen && locale-gen
